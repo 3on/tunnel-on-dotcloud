@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Let's open a SSH tunnel</title>
+</head>
+	<body>
+		<h1>No SSH tunnel open</h1>
+		<p>
+			You need to open a SSH tunnel to where the HTTP traffic will be proxied.<br />
+			To do so just run the following command on you computer. Don't forget to replace $USER, $HOST and $PORT with the right values.<br/>
+			To get thoses value just run <code>dotcloud info webtunnel.proxy</code> and look for the ssh url <code>ssh://$USER@$HOST:$PORT</code><br />
+			<br />
+			Also replace <code>localhost:8080</code> to point to your webserver. If you don't have any just run <code>python -m SimpleHTTPServer</code> to get one running on port 8080.
+		</p>
+
+		<h2>To open a tunnel</h2>
+		<code>ssh -i ~/.dotcloud/dotcloud.key -l $USER -p $PORT $HOST -R 8042:localhost:8080</code>
+	</body>
+</html>

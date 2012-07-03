@@ -1,0 +1,3 @@
+proxy:
+    type: static
+    approot: www

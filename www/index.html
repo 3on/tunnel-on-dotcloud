@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Web Tunnel thanks to dotCloud</title>
+</head>
+<body>
+	<h1>Grab host url</h1>
+	<pre><code>
+		dotcloud info tunnel.proxy
+	</code></pre>
+
+	<h1>SSH tunnel creation</h1>
+	<pre><code>
+		ssh -i ~/.dotcloud/dotcloud.key -l $USERNAME -p $PORT $HOST -R $PROXY_PORT:localhost:1234
+	</code></pre>
+
+</body>
+</html>
